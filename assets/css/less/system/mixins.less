@@ -1,0 +1,129 @@
+
+/* В миксинах описываются функции, упрощающие дальнейшее описание стилей */
+
+.rounded(@value: 3px) {
+    -webkit-border-radius: @value;
+    -moz-border-radius: @value;
+    border-radius: @value;
+}
+
+.box-shadow(@value) {
+    -webkit-box-shadow: @value;
+    -moz-box-shadow: @value;
+    box-shadow: @value;
+}
+
+.linear-gradient(@start, @end) {
+    background: -moz-linear-gradient(left, @start 0%, @end 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, @start), color-stop(100%, @end));
+    background: -webkit-linear-gradient(left, @start 0%, @end 100%);
+    background: -o-linear-gradient(left, @start 0%, @end 100%);
+    background: -ms-linear-gradient(left, @start 0%, @end 100%);
+    background: linear-gradient(to right, @start 0%, @end 100%);
+}
+
+.linear-gradient-y(@start, @end) {
+    background: -moz-linear-gradient(top, @start 0%, @end 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @start), color-stop(100%, @end));
+    background: -webkit-linear-gradient(top, @start 0%, @end 100%);
+    background: -o-linear-gradient(top, @start 0%, @end 100%);
+    background: -ms-linear-gradient(top, @start 0%, @end 100%);
+    background: linear-gradient(to bottom, @start 0%, @end 100%);
+}
+
+
+.scale(@value: 1.1) {
+    -webkit-transform: scale(@value);
+    -moz-transform: scale(@value);
+    -o-transform: scale(@value);
+    transform: scale(@value);
+}
+
+.rotate(@value: 360deg) {
+    -webkit-transform: rotate(@value);
+    -moz-transform: rotate(@value);
+    -o-transform: rotate(@value);
+    -ms-transform: rotate(@value);
+    transform: rotate(@value);
+}
+
+.rotateX(@value: 90deg) {
+    -webkit-transform: rotateX(@value);
+    -moz-transform: rotateX(@value);
+    -o-transform: rotateX(@value);
+    -ms-transform: rotateX(@value);
+    transform: rotateX(@value);
+}
+
+.transition(@first: all .15s) {
+    -webkit-transition: @first;
+    -moz-transition: @first;
+    -o-transition: @first;
+    -ms-transition: @first;
+    transition: @first;
+}
+
+.multiple-transition(@first: all .15s, @second) {
+    -webkit-transition: @first, @second;
+    -moz-transition: @first, @second;
+    -o-transition: @first, @second;
+    -ms-transition: @first, @second;
+    transition: @first, @second;
+}
+
+.transition-delay(@value: .15s) {
+    -webkit-transition-delay: @value;
+    transition-delay: @value;
+}
+
+.animation(@value) {
+    -webkit-animation: @value;
+    -moz-animation: @value;
+    -o-animation: @value;
+    animation: @value;
+}
+
+.animation-play-state(@value: paused) {
+    -webkit-animation-play-state: @value;
+    -moz-animation-play-state: @value;
+    -o-animation-play-state: @value;
+    animation-play-state: @value;
+}
+
+.text-gradient(@start, @end) {
+    background: -webkit-linear-gradient(top, @start 0%, @end 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-complicated-gradient(@start, @before_center, @after_center, @end, @color: #fafafa) {
+    color: @color;
+    background: -webkit-linear-gradient(top, @start 20%, @before_center 40%, @after_center 80%, @end 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-complicated-gradient-center(@start, @before_center, @after_center, @end) {
+	background: -webkit-linear-gradient(top, @start 0%, @before_center 50%, @after_center 51%, @end 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.text-double-border(@first_border, @second_border, @size: 2px, @size_first_border: 1px) {
+	text-shadow:
+		-@size_first_border -@size_first_border 0 @first_border,
+		@size_first_border -@size_first_border 0 @first_border,
+		-@size_first_border @size_first_border 0 @first_border,
+		@size_first_border @size_first_border 0 @first_border,
+		-2px -2px @size @second_border,
+		2px -2px @size @second_border,
+		-2px 2px @size @second_border,
+		2px 2px @size @second_border;
+}
+
+.clear(@value: both) {
+    display: block;
+    content: '';
+    clear: @value;
+}
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <!-- 1.
+        Подключаем стили из общего LESS-файла -->
+    <link rel="stylesheet" type="text/less" href="/assets/css/main.less"/>
+    <script>
+        less = {
+            env: "development",
+            poll: 1000
+        };
+    </script>
+    <script src="/assets/js/lib/less-1.7.3.min.js"></script>
+    <!-- ////// -->
+
+
+
+    <!-- 2.
+        Подключаем js-библиотеки и плагины необходимые для работы -->
+    <script src="/assets/js/lib/jquery-1.10.2.min.js"></script>
+
+    <!-- ////// -->
+
+
+    <!-- 3.
+        Последним подключаем исполняемый js-файл со своими кастомными функциями -->
+    <script src="/assets/js/fns.js"></script>
+
+
+
+</head>
+<body>
+
+    <!-- Общий блок -->
+    <div class="layout">
+
+        <!-- header -->
+        <header class="header">
+
+            <div class="reduser">
+
+            </div>
+
+        </header>
+
+
+
+        <!-- container -->
+        <section class="container">
+
+            <!-- Блок который держит ширину, если нужно мин/макс -->
+            <div class="reduser">
+
+
+                <aside class="sidebar">
+
+                </aside>
+
+                <div class="content">
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- footer -->
+        <footer class="footer">
+
+            <div class="reduser">
+
+            </div>
+
+        </footer>
+
+
+    </div>
+
+
+</body>
+
+</html>
