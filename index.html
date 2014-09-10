@@ -3,10 +3,14 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
     <title></title>
 
     <!-- 1.
-        Подключаем стили из общего LESS-файла -->
+        -- Подключаем стили из общего LESS-файла -->
     <link rel="stylesheet" type="text/less" href="/assets/css/main.less"/>
     <script>
         less = {
@@ -20,14 +24,21 @@
 
 
     <!-- 2.
-        Подключаем js-библиотеки и плагины необходимые для работы -->
-    <script src="/assets/js/lib/jquery-1.10.2.min.js"></script>
+        -- Подключаем js-библиотеки и плагины необходимые для работы -->
+    <script src="/assets/js/lib/jquery-1.11.1.min.js"></script>
+    <script src="/assets/js/lib/jquery-1.11.1.min.map"></script>
 
     <!-- ////// -->
 
+    <!-- 3.
+        -- modernizr и defuncr подключаем, только если нужны  -->
+    <script src="/assets/js/lib/modernizr-2.8.3.min.js"></script>
+    <script src="/assets/js/lib/defuncr.js"></script>
+
+
 
     <!-- 3.
-        Последним подключаем исполняемый js-файл со своими кастомными функциями -->
+        -- Последним подключаем исполняемый js-файл со своими кастомными функциями -->
     <script src="/assets/js/fns.js"></script>
 
 
